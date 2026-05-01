@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- MOBILE FIX -->
+<meta name="viewport"
+content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <title>Happy 14th Birthday Suru 🤍</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -24,7 +30,7 @@ height:100vh;
 color:#6d4c41;
 }
 
-/* Premium Animated Background */
+/* BACKGROUND */
 
 .bg{
 position:fixed;
@@ -75,7 +81,7 @@ transform:translateY(30px) translateX(20px);
 }
 }
 
-/* Floating Emojis */
+/* FLOATING */
 
 .heart{
 position:absolute;
@@ -98,7 +104,7 @@ opacity:0;
 }
 }
 
-/* Pages */
+/* PAGE */
 
 .page{
 display:none;
@@ -124,7 +130,7 @@ transform:translateY(0);
 }
 }
 
-/* Premium Glass Card */
+/* CARD */
 
 .card{
 position:relative;
@@ -149,8 +155,6 @@ box-shadow:
 0 15px 50px rgba(0,0,0,0.18),
 0 0 40px rgba(255,255,255,0.35);
 }
-
-/* Shining Card Effect */
 
 .card::before{
 content:'';
@@ -179,7 +183,7 @@ transform:translateX(100%) rotate(25deg);
 }
 }
 
-/* Typography */
+/* TEXT */
 
 h1{
 font-size:54px;
@@ -201,7 +205,7 @@ font-size:19px;
 line-height:1.9;
 }
 
-/* Premium Buttons */
+/* BUTTON */
 
 button{
 position:relative;
@@ -221,7 +225,6 @@ box-shadow:0 8px 20px rgba(0,0,0,0.12);
 
 button:hover{
 transform:translateY(-5px) scale(1.05);
-box-shadow:0 12px 25px rgba(0,0,0,0.15);
 }
 
 button::before{
@@ -240,7 +243,7 @@ button:hover::before{
 left:120%;
 }
 
-/* Cake */
+/* CAKE */
 
 .cake{
 position:relative;
@@ -305,7 +308,7 @@ transform:translateX(-50%) scale(1.25);
 }
 }
 
-/* PREMIUM PHOTO GALLERY */
+/* GALLERY */
 
 .gallery{
 display:flex;
@@ -366,10 +369,6 @@ rotateY(8deg)
 rotateX(4deg)
 translateY(-12px)
 scale(1.05);
-
-box-shadow:
-0 20px 40px rgba(0,0,0,0.22),
-0 0 30px rgba(255,255,255,0.45);
 }
 
 .photo-card:hover img{
@@ -396,7 +395,7 @@ transition:0.8s;
 left:130%;
 }
 
-/* Typing */
+/* TYPING */
 
 .typing{
 font-size:20px;
@@ -405,7 +404,7 @@ white-space:pre-line;
 margin-top:20px;
 }
 
-/* Emoji */
+/* EMOJI */
 
 .emoji{
 font-size:70px;
@@ -422,7 +421,7 @@ transform:translateY(-10px);
 }
 }
 
-/* Confetti */
+/* CONFETTI */
 
 .confetti{
 position:absolute;
@@ -438,12 +437,78 @@ transform:translateY(110vh) rotate(720deg);
 }
 }
 
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+body{
+overflow:auto;
+}
+
+.page{
+padding:15px;
+height:auto;
+min-height:100vh;
+}
+
+.card{
+width:95%;
+padding:25px;
+border-radius:25px;
+}
+
+h1{
+font-size:32px;
+line-height:1.3;
+}
+
+h2{
+font-size:22px;
+}
+
+p{
+font-size:16px;
+line-height:1.7;
+}
+
+button{
+font-size:15px;
+padding:12px 28px;
+}
+
+.cake{
+transform:scale(0.8);
+margin-top:10px;
+}
+
+.gallery{
+gap:18px;
+}
+
+.photo-card{
+width:160px;
+height:220px;
+}
+
+.typing{
+font-size:16px;
+line-height:1.7;
+}
+
+.emoji{
+font-size:48px;
+}
+
+}
+
+/* END */
+
 </style>
 </head>
 
 <body>
 
-<!-- Background -->
+<!-- BACKGROUND -->
 
 <div class="bg">
 
@@ -459,7 +524,7 @@ transform:translateY(110vh) rotate(720deg);
 
 </div>
 
-<!-- Music -->
+<!-- MUSIC -->
 
 <audio id="bgMusic" loop>
 <source src="music.mp3" type="audio/mpeg">
@@ -530,35 +595,11 @@ Make a wish and tap the cake 🤍
 <div class="layer layer3"></div>
 
 <div class="candle" style="left:42%">
-
 <div class="flame"></div>
-
-<span style="
-position:absolute;
-top:-35px;
-font-size:24px;
-font-weight:bold;
-color:#7b5b4d;
-">
-1
-</span>
-
 </div>
 
 <div class="candle" style="left:56%">
-
 <div class="flame"></div>
-
-<span style="
-position:absolute;
-top:-35px;
-font-size:24px;
-font-weight:bold;
-color:#7b5b4d;
-">
-4
-</span>
-
 </div>
 
 </div>
@@ -683,16 +724,12 @@ typeEffect();
 
 }
 
-/* Reveal */
-
 function showName(){
 
 document.getElementById('revealName').innerHTML=
 '🤍 SURU 🤍';
 
 }
-
-/* Cake */
 
 function cutCake(){
 
@@ -717,8 +754,6 @@ document.getElementById('cakeNext').style.display=
 'inline-block';
 
 }
-
-/* Confetti */
 
 function createConfetti(){
 
@@ -746,15 +781,11 @@ conf.remove();
 
 }
 
-/* Final Surprise */
-
 function finalSurprise(){
 
 alert('You are truly special 🤍✨');
 
 }
-
-/* Typing Message */
 
 const message = `Happy 14th Birthday Suru 🤍
 
