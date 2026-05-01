@@ -4,7 +4,6 @@
 
 <meta charset="UTF-8">
 
-<!-- MOBILE FIX -->
 <meta name="viewport"
 content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -30,7 +29,7 @@ height:100vh;
 color:#6d4c41;
 }
 
-/* BACKGROUND */
+/* Background */
 
 .bg{
 position:fixed;
@@ -81,7 +80,7 @@ transform:translateY(30px) translateX(20px);
 }
 }
 
-/* FLOATING */
+/* Floating Emojis */
 
 .heart{
 position:absolute;
@@ -104,7 +103,7 @@ opacity:0;
 }
 }
 
-/* PAGE */
+/* Page */
 
 .page{
 display:none;
@@ -130,7 +129,7 @@ transform:translateY(0);
 }
 }
 
-/* CARD */
+/* Premium Card */
 
 .card{
 position:relative;
@@ -151,9 +150,6 @@ transition:0.4s;
 
 .card:hover{
 transform:translateY(-5px);
-box-shadow:
-0 15px 50px rgba(0,0,0,0.18),
-0 0 40px rgba(255,255,255,0.35);
 }
 
 .card::before{
@@ -183,7 +179,7 @@ transform:translateX(100%) rotate(25deg);
 }
 }
 
-/* TEXT */
+/* Text */
 
 h1{
 font-size:54px;
@@ -205,7 +201,7 @@ font-size:19px;
 line-height:1.9;
 }
 
-/* BUTTON */
+/* Button */
 
 button{
 position:relative;
@@ -227,23 +223,7 @@ button:hover{
 transform:translateY(-5px) scale(1.05);
 }
 
-button::before{
-content:'';
-position:absolute;
-top:0;
-left:-100%;
-width:100%;
-height:100%;
-background:rgba(255,255,255,0.25);
-transform:skewX(-25deg);
-transition:0.5s;
-}
-
-button:hover::before{
-left:120%;
-}
-
-/* CAKE */
+/* Cake */
 
 .cake{
 position:relative;
@@ -308,7 +288,7 @@ transform:translateX(-50%) scale(1.25);
 }
 }
 
-/* GALLERY */
+/* Gallery */
 
 .gallery{
 display:flex;
@@ -345,7 +325,7 @@ transition:0.5s;
 }
 
 .photo-card::before{
-content:'💖 Suru 💖';
+content:attr(data-name);
 position:absolute;
 bottom:-100%;
 left:0;
@@ -379,23 +359,7 @@ transform:scale(1.12);
 bottom:0;
 }
 
-.photo-card::after{
-content:'';
-position:absolute;
-top:-120%;
-left:-40%;
-width:70%;
-height:300%;
-background:rgba(255,255,255,0.22);
-transform:rotate(25deg);
-transition:0.8s;
-}
-
-.photo-card:hover::after{
-left:130%;
-}
-
-/* TYPING */
+/* Typing */
 
 .typing{
 font-size:20px;
@@ -404,7 +368,7 @@ white-space:pre-line;
 margin-top:20px;
 }
 
-/* EMOJI */
+/* Emoji */
 
 .emoji{
 font-size:70px;
@@ -421,7 +385,7 @@ transform:translateY(-10px);
 }
 }
 
-/* CONFETTI */
+/* Confetti */
 
 .confetti{
 position:absolute;
@@ -437,7 +401,7 @@ transform:translateY(110vh) rotate(720deg);
 }
 }
 
-/* MOBILE RESPONSIVE */
+/* Mobile */
 
 @media (max-width:768px){
 
@@ -460,10 +424,6 @@ border-radius:25px;
 h1{
 font-size:32px;
 line-height:1.3;
-}
-
-h2{
-font-size:22px;
 }
 
 p{
@@ -501,14 +461,12 @@ font-size:48px;
 
 }
 
-/* END */
-
 </style>
 </head>
 
 <body>
 
-<!-- BACKGROUND -->
+<!-- Background -->
 
 <div class="bg">
 
@@ -524,7 +482,7 @@ font-size:48px;
 
 </div>
 
-<!-- MUSIC -->
+<!-- Music -->
 
 <audio id="bgMusic" loop>
 <source src="music.mp3" type="audio/mpeg">
@@ -647,20 +605,20 @@ Next ➜
 <h1>📸 Favorite Memories 📸</h1>
 
 <p>
-Replace these with your favorite photos together 🤍
+Some of my favorite people, memories, and moments 🤍
 </p>
 
 <div class="gallery">
 
-<div class="photo-card">
+<div class="photo-card" data-name="💖 Sakchunni 😁">
 <img src="photo1.jpg">
 </div>
 
-<div class="photo-card">
+<div class="photo-card" data-name="🤭 Puchki 🤭">
 <img src="photo2.jpg">
 </div>
 
-<div class="photo-card">
+<div class="photo-card" data-name="🙃 Maa 🙃">
 <img src="photo3.jpg">
 </div>
 
@@ -687,10 +645,6 @@ Next ➜
 <h1>Happy Birthday Suru 🌸</h1>
 
 <p id="typingText" class="typing"></p>
-
-<button onclick="finalSurprise()">
-Final Surprise 🎁
-</button>
 
 </div>
 
@@ -781,21 +735,15 @@ conf.remove();
 
 }
 
-function finalSurprise(){
-
-alert('You are truly special 🤍✨');
-
-}
-
 const message = `Happy 14th Birthday Suru 🤍
 
-Today is your special day 🎂✨
+Since 2023, these three years with you have become one of the happiest and most unforgettable parts of my life. From the time you were 11 to now turning 14, every moment with you slowly turned into beautiful memories that I’ll always cherish. All our random talks, endless gossip, silly jokes, fun arguments, late-night conversations, laughter, teasing, and even the smallest moments became so special to me without us even realizing it.
 
-I hope your life is always filled with happiness, smiles, beautiful memories and endless success 🌸
+Thank you for always being there and making normal days feel brighter and happier. Talking to you somehow became part of my daily happiness, and over time our friendship and bond became truly precious to me. Watching you grow over these years into such an amazing, caring, funny, strong, and beautiful person has honestly been wonderful.
 
-Keep shining, keep smiling and never forget how amazing you are 💕
+I really hope this new year of your life brings you endless happiness, success, peace, beautiful memories, and everything your heart wishes for. Keep smiling, keep shining, and never forget how special and important you are. No matter how much time passes, these memories and this friendship will always mean a lot to me 🤍
 
-Once again... Happy Birthday 🥳🎉`;
+Once again, Happy 14th Birthday Suru 🌸🎂✨`;
 
 let i=0;
 
@@ -808,7 +756,7 @@ message.charAt(i);
 
 i++;
 
-setTimeout(typeEffect,35);
+setTimeout(typeEffect,30);
 
 }
 
